@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAsyncRequestInfo请求参数结构体
  *
- * @method string getAsyncRequestId() 获取异步请求Id
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步请求Id
+ * @method string getAsyncRequestId() 获取异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
+ * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
  */
 class DescribeAsyncRequestInfoRequest extends AbstractModel
 {
     /**
-     * @var string 异步请求Id
+     * @var string 异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
      */
     public $AsyncRequestId;
 
     /**
-     * @param string $AsyncRequestId 异步请求Id
+     * @param string $AsyncRequestId 异步请求Id，涉及到异步流程的接口返回，如CreateBackupDBInstance
      */
     function __construct()
     {
