@@ -18,19 +18,19 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBackupDBInstance返回参数结构体
+ * DeleteAccountUser返回参数结构体
  *
- * @method string getAsyncRequestId() 获取查询备份流程的状态。
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置查询备份流程的状态。
+ * @method integer getFlowId() 获取账户删除任务ID。
+ * @method void setFlowId(integer $FlowId) 设置账户删除任务ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateBackupDBInstanceResponse extends AbstractModel
+class DeleteAccountUserResponse extends AbstractModel
 {
     /**
-     * @var string 查询备份流程的状态。
+     * @var integer 账户删除任务ID。
      */
-    public $AsyncRequestId;
+    public $FlowId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateBackupDBInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId 查询备份流程的状态。
+     * @param integer $FlowId 账户删除任务ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateBackupDBInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
