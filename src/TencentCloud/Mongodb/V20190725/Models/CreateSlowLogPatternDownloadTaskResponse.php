@@ -18,19 +18,19 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBackupDBInstance返回参数结构体
+ * CreateSlowLogPatternDownloadTask返回参数结构体
  *
- * @method string getAsyncRequestId() 获取<p>查询备份流程的状态。</p>
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置<p>查询备份流程的状态。</p>
+ * @method array getStatus() 获取<p>下载任务状态</p>
+ * @method void setStatus(array $Status) 设置<p>下载任务状态</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateBackupDBInstanceResponse extends AbstractModel
+class CreateSlowLogPatternDownloadTaskResponse extends AbstractModel
 {
     /**
-     * @var string <p>查询备份流程的状态。</p>
+     * @var array <p>下载任务状态</p>
      */
-    public $AsyncRequestId;
+    public $Status;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateBackupDBInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId <p>查询备份流程的状态。</p>
+     * @param array $Status <p>下载任务状态</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateBackupDBInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -18,19 +18,33 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBackupDBInstance返回参数结构体
+ * DescribeDBInstanceLogToCLS返回参数结构体
  *
- * @method string getAsyncRequestId() 获取<p>查询备份流程的状态。</p>
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置<p>查询备份流程的状态。</p>
+ * @method LogToCLSConfig getErrorLog() 获取<p>实例错误日志投递配置</p>
+ * @method void setErrorLog(LogToCLSConfig $ErrorLog) 设置<p>实例错误日志投递配置</p>
+ * @method LogToCLSConfig getSlowLog() 获取<p>实例慢日志投递配置</p>
+ * @method void setSlowLog(LogToCLSConfig $SlowLog) 设置<p>实例慢日志投递配置</p>
+ * @method LogToCLSConfig getOperationLog() 获取<p>实例操作日志投递配置</p>
+ * @method void setOperationLog(LogToCLSConfig $OperationLog) 设置<p>实例操作日志投递配置</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateBackupDBInstanceResponse extends AbstractModel
+class DescribeDBInstanceLogToCLSResponse extends AbstractModel
 {
     /**
-     * @var string <p>查询备份流程的状态。</p>
+     * @var LogToCLSConfig <p>实例错误日志投递配置</p>
      */
-    public $AsyncRequestId;
+    public $ErrorLog;
+
+    /**
+     * @var LogToCLSConfig <p>实例慢日志投递配置</p>
+     */
+    public $SlowLog;
+
+    /**
+     * @var LogToCLSConfig <p>实例操作日志投递配置</p>
+     */
+    public $OperationLog;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +52,9 @@ class CreateBackupDBInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId <p>查询备份流程的状态。</p>
+     * @param LogToCLSConfig $ErrorLog <p>实例错误日志投递配置</p>
+     * @param LogToCLSConfig $SlowLog <p>实例慢日志投递配置</p>
+     * @param LogToCLSConfig $OperationLog <p>实例操作日志投递配置</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +70,19 @@ class CreateBackupDBInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("ErrorLog",$param) and $param["ErrorLog"] !== null) {
+            $this->ErrorLog = new LogToCLSConfig();
+            $this->ErrorLog->deserialize($param["ErrorLog"]);
+        }
+
+        if (array_key_exists("SlowLog",$param) and $param["SlowLog"] !== null) {
+            $this->SlowLog = new LogToCLSConfig();
+            $this->SlowLog->deserialize($param["SlowLog"]);
+        }
+
+        if (array_key_exists("OperationLog",$param) and $param["OperationLog"] !== null) {
+            $this->OperationLog = new LogToCLSConfig();
+            $this->OperationLog->deserialize($param["OperationLog"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
